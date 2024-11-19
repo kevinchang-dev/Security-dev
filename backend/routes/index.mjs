@@ -1,0 +1,30 @@
+import express from "express";
+import {
+  createUser,
+  loginUser,
+  logoutCurrentUser,
+  checkExistUser,
+  getAddressFromUsername,
+  getPrivateKey,
+  getAllUsername
+} from "../controllers/userController.mjs";
+import {
+  recordMessage,
+  getMessage,
+  getContactList
+} from "../controllers/messageController.mjs";
+
+const router = express.Router();
+
+router.post("/signup", createUser);
+router.post("/login", loginUser);
+router.post("/logout", logoutCurrentUser);
+router.post("/checkExistUser", checkExistUser);
+router.post("/getAddress", getAddressFromUsername);
+router.post("/recordMessage", recordMessage);
+router.post("/getMessage", getMessage);
+router.post("/getContactList", getContactList);
+router.post("/getPrivateKey", getPrivateKey);
+router.get("/getAllUserName", getAllUsername);
+
+export default router;
