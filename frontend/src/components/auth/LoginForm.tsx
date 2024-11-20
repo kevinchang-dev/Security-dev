@@ -24,7 +24,7 @@ export function LoginForm({ onLoginSuccess }: LoginFormProps) {
 
     try {  
       // Replace with your actual login endpoint  
-      const response = await axios.post('http://10.96.45.68:5000/api/login', credentials);  
+      const response = await axios.post('http://192.168.135.8:5000/api/login', credentials);  
 
       if (response.status === 200) {  
         toast({  

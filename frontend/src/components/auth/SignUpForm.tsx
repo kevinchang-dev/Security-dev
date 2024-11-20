@@ -52,7 +52,7 @@ export function SignUpForm({ onSignUpSuccess, handleLoginSuccess }: SignUpFormPr
   const handleSignUpSuccess = async (formData: FormData) => {   
     try {  
       console.log("handle");  
-      const response = await axios.post('http://10.96.45.68:5000/api/signup', formData);  
+      const response = await axios.post('http://192.168.135.8:5000/api/signup', formData);  
 
       if (response.status.toString()[0] === "2") {  
         toast({  
